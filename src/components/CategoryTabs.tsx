@@ -1,4 +1,3 @@
-
 import React from "react";
 import Icon from "@/components/ui/icon";
 
@@ -10,18 +9,22 @@ interface CategoryTabsProps {
 const categories = [
   { id: "sushi", name: "Суши", icon: "Fish" },
   { id: "rolls", name: "Роллы", icon: "CircleDot" },
-  { id: "pizza", name: "Пицца", icon: "Pizza" },
-  { id: "wok", name: "WOK", icon: "Soup" },
+  { id: "sets", name: "Сеты", icon: "PackageOpen" },
+  { id: "soups", name: "Супы", icon: "Soup" },
+  { id: "salads", name: "Салаты", icon: "Salad" },
+  { id: "drinks", name: "Напитки", icon: "Coffee" },
+  { id: "sauces", name: "Соусы", icon: "Droplets" },
+  { id: "toppings", name: "Топпинги", icon: "Sparkles" },
 ];
 
-const CategoryTabs: React.FC<CategoryTabsProps> = ({ 
-  activeCategory, 
-  setActiveCategory 
+const CategoryTabs: React.FC<CategoryTabsProps> = ({
+  activeCategory,
+  setActiveCategory,
 }) => {
   return (
     <div className="w-full mb-8 border-b border-gray-200">
       <div className="container mx-auto px-4">
-        <div className="flex flex-wrap justify-center md:justify-start">
+        <div className="flex flex-wrap justify-center md:justify-start overflow-x-auto pb-2">
           {categories.map((category) => (
             <div
               key={category.id}
